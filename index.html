@@ -15,16 +15,20 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+
+    <!-- -----------Use Swiper from CDN------------------------ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <title>NFT preview card component</title>
 </head>
 
 <body>
-    <main class="container">
+    <!-- <main class="container">
 
         <article>
             <div class="cubeImage">
                 <div class="carre"><img class="oeil" src="./images/icon-view.svg"></div>
-                
+
                 <img class="cube" src="./images/image-equilibrium.jpg" alt="cube en equilibre">
             </div>
 
@@ -43,9 +47,134 @@
             </footer>
         </article>
 
+    </main> -->
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- ------------------slide 1 --------------------------->
+            <div class="swiper-slide">
+                <article>
+                    <div class="cubeImage">
+                        <div class="carre"><img class="oeil" src="./images/icon-view.svg"></div>
 
+                        <img class="cube" src="./images/image-equilibrium.jpg" alt="cube en equilibre">
+                    </div>
 
-    </main>
+                    <div class="content">
+                        <h2>Equilibrium #3429</h2>
+                        <p>Our Equilibrium collection promotes balance and calm.</p>
+                        <div class="infoTime">
+                            <span class="ETH"><img src="./images/icon-ethereum.svg" alt="">&nbsp 0.041 ETH</span>
+                            <span class="clock"><img src="./images/icon-clock.svg" alt="">&nbsp 3 days left</span>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <img id="avatar" src="./images/image-avatar.png" alt="avatar">&nbsp &nbsp &nbsp
+                        <p>Creation of <span class="nameCreator">Jules Wyvern</span></p>
+                    </footer>
+                </article>
+            </div>
+            <!-- ------------------slide 2 --------------------------->
+            <div class="swiper-slide">
+                <article>
+                    <div class="cubeImage">
+                        <div class="carre"><img class="oeil" src="./images/icon-view.svg"></div>
+
+                        <img class="cube" src="./images/image-equilibrium.jpg" alt="cube en equilibre">
+                    </div>
+
+                    <div class="content">
+                        <h2>Equilibrium #3429</h2>
+                        <p>Our Equilibrium collection promotes balance and calm.</p>
+                        <div class="infoTime">
+                            <span class="ETH"><img src="./images/icon-ethereum.svg" alt="">&nbsp 0.041 ETH</span>
+                            <span class="clock"><img src="./images/icon-clock.svg" alt="">&nbsp 3 days left</span>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <img id="avatar" src="./images/image-avatar.png" alt="avatar">&nbsp &nbsp &nbsp
+                        <p>Creation of <span class="nameCreator">Jules Wyvern</span></p>
+                    </footer>
+                </article>
+            </div>
+            <!-- ------------------slide 3 --------------------------->
+            <div class="swiper-slide">
+                <article>
+                    <div class="cubeImage">
+                        <div class="carre"><img class="oeil" src="./images/icon-view.svg"></div>
+
+                        <img class="cube" src="./images/image-equilibrium.jpg" alt="cube en equilibre">
+                    </div>
+
+                    <div class="content">
+                        <h2>Equilibrium #3429</h2>
+                        <p>Our Equilibrium collection promotes balance and calm.</p>
+                        <div class="infoTime">
+                            <span class="ETH"><img src="./images/icon-ethereum.svg" alt="">&nbsp 0.041 ETH</span>
+                            <span class="clock"><img src="./images/icon-clock.svg" alt="">&nbsp 3 days left</span>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <img id="avatar" src="./images/image-avatar.png" alt="avatar">&nbsp &nbsp &nbsp
+                        <p>Creation of <span class="nameCreator">Jules Wyvern</span></p>
+                    </footer>
+                </article>
+            </div>
+
+        </div>
+        <!-- ------------- If we need navigation buttons--------- -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+//    const swiper = new Swiper(".swiper", {
+//     effect: 'slide',
+//       slidesPerView: 4,
+//       centeredSlides: true,
+//       loop: true,
+//       navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//     });
+const swiper = new Swiper(".swiper", {
+      effect: "cube",
+      grabCursor: false,
+      loop:true,
+      speed: 900,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // const swiper = new Swiper('.swiper', {
+    //     effect: 'cube',
+    //     slidesPerView: 3,
+    //     cssMode: true,
+    //     loop: true,
+    //     direction: 'horizontal',
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    // });
+</script>
 
 </body>
 
